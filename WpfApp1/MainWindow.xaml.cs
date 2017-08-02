@@ -24,5 +24,13 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void TextBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TextBox1 != null && TextBox2 != null && TextBox3 != null)
+            {
+                TextBox3.Text = (Convert.ToDouble(TextBox1.Text) + Convert.ToDouble(TextBox2.Text)).ToString();
+            }
+        }
     }
 }
